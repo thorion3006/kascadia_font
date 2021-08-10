@@ -44,8 +44,8 @@ do
     new_file=${new_file/CascadiaMonoPL/KascadiaMono}
     mv "$f" "$new_file"
 done 
-mkdir patched_fonts
-mv ttf/variable/* patched_fonts/
-mv ttf/static/*/patched/* patched_fonts/
+mkdir fonts
+mv ttf/variable/* fonts/
+mv ttf/static/*/patched/* fonts/
 filename=(${CASCADIAVERS#v*/})
-zip Kascadia-$1.zip patched_fonts/*
+zip Kascadia-$1.zip fonts/*
